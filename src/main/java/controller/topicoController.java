@@ -10,27 +10,19 @@ import org.springframework.web.bind.annotation.*;
 import repositories.topicoRepository;
 import topico.Topico;
 
-import java.util.List;
-
 @RestController
-//@RequestMapping("/topicos")
-public class topicoController {
+@RequestMapping("/topico")
 
+public class topicoController {
     @Autowired
     private topicoRepository topicoRepository;
-
-    @Autowired
-    private Topico topico;
 
     @PostMapping
     @Transactional
     public ResponseEntity novotopico (@RequestBody @Valid novoTopicoDTO dados){
+        return ResponseEntity.ok(null);}
 
-        return ResponseEntity.ok(null);
-
-    }
-
-    @GetMapping ("/teste")
+    @GetMapping
     public String  teste() {
        return "teste";
     }
