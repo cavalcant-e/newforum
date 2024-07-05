@@ -1,4 +1,4 @@
-package usuario;
+package com.cavalcante.forumhub.usuario;
 import jakarta.persistence.*;
 
 import lombok.*;

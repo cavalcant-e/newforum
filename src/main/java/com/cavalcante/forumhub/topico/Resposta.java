@@ -1,4 +1,4 @@
-package topico;
+package com.cavalcante.forumhub.topico;
 
 import jakarta.persistence.*;
 import lombok.*;

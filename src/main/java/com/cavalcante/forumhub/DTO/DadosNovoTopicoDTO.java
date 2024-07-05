@@ -1,22 +1,26 @@
-package DTO;
+package com.cavalcante.forumhub.DTO;
 
 
+import com.cavalcante.forumhub.topico.Topico;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDateTime;
 
-public record novoTopicoDTO(
+public record DadosNovoTopicoDTO(
+
+
         @NotBlank
         String titulo,
         @NotBlank
         String mensagem,
         @NotNull
-        LocalDateTime dataCriacao,
+        LocalDateTime datacriacao,
 
-        boolean status,
         @NotBlank
         String autor,
 
-        String respostas){
-}
+        String resposta){
+
+        }
+
