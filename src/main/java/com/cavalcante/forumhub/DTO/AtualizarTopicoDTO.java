@@ -2,11 +2,12 @@ package com.cavalcante.forumhub.DTO;
 
 import jakarta.validation.constraints.NotNull;
 
-public record atualizarTopicoDTO(
+public record AtualizarTopicoDTO(
                                 @NotNull
                                 Long id,
                                 String titulo,
-                                String mensagem
+                                String mensagem,
+                                Long usuarioid
 
 ) {
 }

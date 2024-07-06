@@ -1,9 +1,7 @@
 package com.cavalcante.forumhub.topico;
 
 
-import com.cavalcante.forumhub.DTO.ConsultaTopicoDTO;
-import com.cavalcante.forumhub.DTO.DadosNovoTopicoDTO;
-import com.cavalcante.forumhub.DTO.atualizarTopicoDTO;
+import com.cavalcante.forumhub.DTO.AtualizarTopicoDTO;
 import jakarta.persistence.Entity;
 import jakarta.persistence.*;
 import jakarta.persistence.Table;
@@ -36,16 +34,17 @@ public class Topico {
 
     private String autor;
 
-    private String resposta;
+    private boolean resposta;
 
+    private Long usuarioid;
 
-    public Topico(atualizarTopicoDTO dados) {
+    public Topico(AtualizarTopicoDTO dados) {
         this.titulo = dados.titulo();
         this.mensagem = dados.mensagem();
 
     }
 
-    public void atualizarInformacoes(atualizarTopicoDTO dados) {
+    public void atualizarInformacoes(AtualizarTopicoDTO dados) {
         if(dados.titulo() != null) {
             this.titulo = dados.titulo();
         }
@@ -53,6 +52,15 @@ public class Topico {
             this.mensagem = dados.mensagem();
         }
 
+
+    }
+
+    public void ativarResposta() {
+        this.resposta = true;
+    }
+
+    public void fechar() {
+        this.status = false;
 
     }
 }

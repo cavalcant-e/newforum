@@ -16,11 +16,12 @@ public record DadosNovoTopicoDTO(
         String mensagem,
         @NotNull
         LocalDateTime datacriacao,
+        @NotNull
+        Long usuarioid,
 
-        @NotBlank
         String autor,
 
-        String resposta){
+        boolean resposta){
 
         }
 

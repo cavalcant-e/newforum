@@ -1,7 +1,10 @@
 package com.cavalcante.forumhub.topico;
 
+import com.cavalcante.forumhub.DTO.AtualizarRespostaDTO;
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "respostas")
@@ -20,10 +23,20 @@ public class Resposta {
 
     private String mensagem;
 
-    private Long topicoId;
+    private Long topicoid;
+
+    private Long usuarioid;
 
     private String autor;
 
     private String solucao;
 
+    private LocalDateTime datacriacao;
+
+    public void atualizarInformacoes(AtualizarRespostaDTO dados) {
+        if(dados.solucao() != null) {
+            this.solucao = dados.solucao();
+        }
+
+    }
 }
