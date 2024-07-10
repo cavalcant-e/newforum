@@ -1,8 +1,7 @@
-package com.cavalcante.forumhub.DTO;
+package com.cavalcante.forumhub.DTO.resposta;
 
 import com.cavalcante.forumhub.topico.Resposta;
 
-import javax.xml.crypto.Data;
 import java.time.LocalDateTime;
 
 public record ListaRespostaDTO(Long topicoid,
@@ -13,7 +12,7 @@ public record ListaRespostaDTO(Long topicoid,
                                String resposta,
                                LocalDateTime datacriacao) {
     public ListaRespostaDTO (Resposta resposta){
-            this(resposta.getTopicoid(),resposta.getTitulo(),resposta.getMensagem(), resposta.getId(),
+            this(resposta.getTopicoId(),resposta.getTitulo(),resposta.getMensagem(), resposta.getId(),
                     resposta.getAutor(), resposta.getSolucao(), resposta.getDatacriacao());
 
     }

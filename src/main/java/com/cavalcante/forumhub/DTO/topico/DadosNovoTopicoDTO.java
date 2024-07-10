@@ -1,7 +1,6 @@
-package com.cavalcante.forumhub.DTO;
+package com.cavalcante.forumhub.DTO.topico;
 
 
-import com.cavalcante.forumhub.topico.Topico;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
@@ -14,7 +13,7 @@ public record DadosNovoTopicoDTO(
         String titulo,
         @NotBlank
         String mensagem,
-        @NotNull
+
         LocalDateTime datacriacao,
         @NotNull
         Long usuarioid,

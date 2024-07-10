@@ -1,7 +1,7 @@
 package com.cavalcante.forumhub.topico;
 
 
-import com.cavalcante.forumhub.DTO.AtualizarTopicoDTO;
+import com.cavalcante.forumhub.DTO.topico.AtualizarTopicoDTO;
 import jakarta.persistence.Entity;
 import jakarta.persistence.*;
 import jakarta.persistence.Table;

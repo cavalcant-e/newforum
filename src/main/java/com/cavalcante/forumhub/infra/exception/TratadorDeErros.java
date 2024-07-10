@@ -1,4 +1,4 @@
-package com.cavalcante.forumhub.exception;
+package com.cavalcante.forumhub.infra.exception;
 
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.ResponseEntity;

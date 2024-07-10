@@ -1,4 +1,4 @@
-package com.cavalcante.forumhub.DTO;
+package com.cavalcante.forumhub.DTO.topico;
 
 public record AtualizarRespostaDTO(
                                     Long topicoid,

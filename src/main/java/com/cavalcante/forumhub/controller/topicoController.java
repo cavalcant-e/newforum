@@ -1,7 +1,7 @@
 package com.cavalcante.forumhub.controller;
 
 
-import com.cavalcante.forumhub.DTO.*;
+import com.cavalcante.forumhub.DTO.topico.*;
 import com.cavalcante.forumhub.repositories.TopicoRepository;
 import com.cavalcante.forumhub.topico.Topico;
 import com.cavalcante.forumhub.topico.TopicoService;

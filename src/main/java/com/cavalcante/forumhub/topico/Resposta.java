@@ -1,6 +1,6 @@
 package com.cavalcante.forumhub.topico;
 
-import com.cavalcante.forumhub.DTO.AtualizarRespostaDTO;
+import com.cavalcante.forumhub.DTO.topico.AtualizarRespostaDTO;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -23,7 +23,8 @@ public class Resposta {
 
     private String mensagem;
 
-    private Long topicoid;
+    @Column (name = "topicoid")
+    private Long topicoId;
 
     private Long usuarioid;
 
