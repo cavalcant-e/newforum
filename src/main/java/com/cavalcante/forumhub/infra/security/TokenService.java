@@ -49,6 +49,26 @@ public class TokenService {
         } catch (JWTVerificationException exception) {
             throw new RuntimeException("Token JWT inválido ou expirado!");
         }
+
+ }
+    public String pegarIDClaim(String tokenJWT) {
+        try {
+            var algoritmo = Algorithm.HMAC256(secreto);
+          var verifier = JWT.require(algoritmo)
+                    .withIssuer("forumhub")
+                    .build();
+            var decodedJWT = verifier.verify(tokenJWT);
+           String id = decodedJWT.getClaim("id").asString();
+
+            System.out.println("imprindo o pegarIDClaim: ID " + id);
+
+            return id;
+
+        } catch (JWTVerificationException exception) {
+            throw new RuntimeException("Token JWT inválido ou expirado!");
+        }
+
+
 }}
 
 

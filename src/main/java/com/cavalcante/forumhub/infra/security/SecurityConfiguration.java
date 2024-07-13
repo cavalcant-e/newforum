@@ -32,6 +32,7 @@ public class SecurityConfiguration {
                         .authorizeRequests()
                 //Linha abaixo libera  requisicao da pagina login sem token do cabeçalho
                 .requestMatchers(HttpMethod.POST, "/login").permitAll()
+                .requestMatchers(HttpMethod.POST, "/usuario").permitAll()
                 .anyRequest().authenticated()
                 .and().addFilterBefore(securityFiltro,  UsernamePasswordAuthenticationFilter.class)
                 .build();

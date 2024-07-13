@@ -30,8 +30,8 @@ public class SecurityFiltro extends OncePerRequestFilter {
         var tokenAutorizadoJWT = recuperarToken(request);
         if (tokenAutorizadoJWT != null) {
             var usuarioLog = tokenService.pegarSubject(tokenAutorizadoJWT);
-//            System.out.println(usuarioLog);
 
+//            System.out.println(usuarioLog);
             var usuario = repository.findByEmail(usuarioLog);
 
             var autenticacao = new UsernamePasswordAuthenticationToken(usuario, null, usuario.getAuthorities());
@@ -49,6 +49,7 @@ public class SecurityFiltro extends OncePerRequestFilter {
         if (autorizacaoHeader != null) {
 
             return autorizacaoHeader.replace("Bearer ", "");
+
         }
         return  null;
 
